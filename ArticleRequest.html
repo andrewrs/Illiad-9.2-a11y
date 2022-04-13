@@ -28,20 +28,21 @@
 					<section name="article-info">
 
 						<div class="form-group col-md-9">
-							<label for="PhotoJournalTitle">
+							
 								<span class="field">
+									<label for="PhotoJournalTitle">
 									<span class="<#ERROR name='ERRORPhotoJournalTitle'>">
 										Title (Journal, Conference Proceedings, Anthology)  
 										<span class="req">(required)</span>
 									</span>
-									<br>
-									<span class="small-notes">
+									</label><br>
+									<span class="small-notes" id="PhotoJournalTitle-instructions">
 										Please do not abbreviate unless your citation is abbreviated  
 									</span>
 								</span>
 								<br>
-							</label>
-							<input type="text" class="form-control" name="PhotoJournalTitle" id="PhotoJournalTitle" value="<#PARAM name='PhotoJournalTitle'>" required>	
+							
+							<input type="text" class="form-control" aria-describedby="PhotoJournalTitle-instructions" name="PhotoJournalTitle" id="PhotoJournalTitle" value="<#PARAM name='PhotoJournalTitle'>" required>	
 						</div>
 
 						<div class="form-group col-md-9">
@@ -123,18 +124,19 @@
 						</div>
 								
 						<div class="form-group col-md-9">
-							<label for="ISSN">
+							
 								<span class="field">
+								<label for="ISSN">
 									<span class="<#ERROR name='ERRORISSN'>"> 
 										ISSN (International Standard Serial Number)   
 									</span>
-								<br>
-									<span class="small-notes">
+								</label>
+									<span class="small-notes" id="ISSN-instructions">
 										If given will speed request processing
 									</span>
 								</span>
 							</label>
-							<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+							<input type="text" class="form-control" aria-describedby="ISSN-instructions" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
 						</div>
 								
 						<!--<div class="form-group col-md-9">
@@ -160,15 +162,16 @@
 						</div>-->
 						
 						<div class="form-group col-md-9">
-							<label for="Notes">
 								<span class="field">
+								<label for="Notes">
 									<span class="<#ERROR name='ERRORNotes'>">  
 										Notes   
-									</span><br>
-									<span class="small-notes">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+									</span>
+								</label>
+									<span class="small-notes" id="Notes-instructions">Put any information here that may help us find the item, as well as any other pertinent information.</span>
 								</span>
-							</label>
-							<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea>
+							
+							<textarea id="Notes" name="Notes" aria-describedby="Notes-instructions" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea>
 						</div>
 					</section>
 					<#INCLUDE filename="include_request_cited.html">                
