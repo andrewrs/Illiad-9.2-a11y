@@ -27,19 +27,18 @@
 					<section name="editgenericrequesttesting-info">
 
 						<div class="form-group col-md-9">
-							<label for="LoanTitle">
 								<span class="field">
+								<label for="LoanTitle">
 									<span class="<#ERROR name='ERRORLoanTitle'>">
 										Title
 										<span class="req">(required)</span>
 									</span>
-									<br>
-									<span class="small-notes">
+								</label>
+									<span class="small-notes" id="LoanTitle-instructions">
 										Please do not abbreviate unless your citation is abbreviated
 									</span> 
 								</span>
-							</label>
-							<input type="text" class="form-control" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>" required>
+							<input type="text" class="form-control" aria-describedby="LoanTitle-instructions" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>" required>
 						</div>
 						
 						<div class="form-group col-md-9">  
@@ -99,18 +98,18 @@
 						</div>
 							
 						<div class="form-group col-md-9">
-							<label for="ISSN">
 								<span class="field">
+								<label for="ISSN">
 									<span class="<#ERROR name='ERRORISSN'>">
 										ISBN (International Standard Book Number)
 									</span>
-									<br>
-									<span class="small-notes">
+								</label>
+									<span class="small-notes" id="ISSN-instructions">
 										If given will speed request processing
 									</span>
 								</span>
-							</label>
-							<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+							
+							<input type="text" class="form-control" aria-describedby="ISSN-instructions" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
 						</div>
 							
 						<!--<div class="form-group col-md-9">
@@ -150,15 +149,16 @@
 						</div>
 							
 						<div class="form-group col-md-9">
-							<label for="Notes">
 								<span class="field">
+								<label for="Notes">
 									<span class="<#ERROR name='ERRORNotes'>">  
 										Notes   
-									</span><br>
-									<span class="small-notes">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+									</span>
+								</label>
+									<span class="small-notes" id="Notes-instructions">Put any information here that may help us find the item, as well as any other pertinent information.</span>
 								</span>
-							</label>
-							<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea><br>
+							
+							<textarea id="Notes" name="Notes" aria-describedby="Notes-instructions" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea><br>
 						</div>
 						
 					</section>
