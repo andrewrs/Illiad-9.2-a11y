@@ -27,20 +27,20 @@
 					<section name="editreportrequest-info">
 							
 						<div class="form-group col-md-9"> 
+							<span class="field">
 							<label for="LoanTitle">
-								<span class="field">
-									<span class="<#ERROR name='ERRORLoanTitle'>">
-										Title 
-										<span class="req">(required)</span>
-									</span> 
-									<br>
-									<span class="small-notes">
-										Please do not abbreviate unless your citation is abbreviated
-									</span>
+								<span class="<#ERROR name='ERRORLoanTitle'>">
+									Title 
+									<span class="req">(required)</span>
 								</span>
 							</label>
-							<input type="text" class="form-control" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>" required>	
-						</div>		
+								<span class="small-notes" id="LoanTitle-instructions">
+									Please do not abbreviate unless your citation is abbreviated
+								</span>
+							</span>
+						
+						<input type="text" class="form-control" aria-describedby="LoanTitle-instructions" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>" required>	
+					</div>			
 						
 						<div class="form-group col-md-9">  
 							<label for="LoanAuthor">
@@ -135,16 +135,17 @@
 						</div>
 								
 						<div class="form-group col-md-9">
+							<span class="field">
 							<label for="Notes">
-								<span class="field">
-									<span class="<#ERROR name='ERRORNotes'>">  
-										Notes   
-									</span><br>
-									<span class="small-notes">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+								<span class="<#ERROR name='ERRORNotes'>">  
+									Notes   
 								</span>
 							</label>
-							<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea><br>
-						</div>
+								<span class="small-notes" id="Notes-instructions">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							</span>
+						
+						<textarea id="Notes" name="Notes" aria-describedby="Notes-instructions" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea><br>
+					</div>
 						
 					</section>
 					<#INCLUDE filename="include_request_cited.html">                
