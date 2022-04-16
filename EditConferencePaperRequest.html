@@ -31,20 +31,18 @@
 						<section name="conferencepaper-info">
 		
 							<div class="form-group col-md-9">
+								<span class="field">
 								<label for="PhotoJournalTitle">
-									<span class="field">
-										<span class="<#ERROR name='ERRORPhotoJournalTitle'>">
-											Conference Name  
-											<span class="req">(required)</span>
-										</span>
-										<br>
-										<span class="small-notes">
-											Please do not abbreviate unless your citation is abbreviated  
-										</span>
+									<span class="<#ERROR name='ERRORPhotoJournalTitle'>">
+										Conference Name  
+										<span class="req">(required)</span>
+								</label>
 									</span>
-									<br>
-									</label>
-								<input type="text" class="form-control" name="PhotoJournalTitle" id="PhotoJournalTitle" value="<#PARAM name='PhotoJournalTitle'>" required>	
+									<span class="small-notes" id="PhotoJournalTitle-Instructions">
+										Please do not abbreviate unless your citation is abbreviated  
+									</span>
+								</span>
+							<input type="text" class="form-control" aria-describedby="PhotoJournalTitle-Instructions" name="PhotoJournalTitle" id="PhotoJournalTitle" value="<#PARAM name='PhotoJournalTitle'>" required>	
 							</div>	
 							
 							<div class="form-group col-md-9">
@@ -124,20 +122,19 @@
 								<input type="text" class="form-control" name="PhotoJournalInclusivePages" id="PhotoJournalInclusivePages" value="<#PARAM name='PhotoJournalInclusivePages'>">
 							</div>
 							
-							<div class="form-group col-md-9">
+						<div class="form-group col-md-9">
+								<span class="field">
 								<label for="ISSN">
-									<span class="field">
-										<span class="<#ERROR name='ERRORISSN'>">
-											ISSN (International Standard Serial Number)
-										</span>
-										<br>
-										<span class="small-notes">
-											If given will speed request processing
-										</span>
+									<span class="<#ERROR name='ERRORISSN'>">
+										ISSN (International Standard Serial Number)
 									</span>
 								</label>
-								<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
-							</div>
+								<span class="small-notes" id="ISSN-instructions">
+									If given will speed request processing
+								</span>
+								</span>
+							<input type="text" class="form-control" aria-describedby="ISSN-instructions" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+						</div>
 						
 							<!--<div class="form-group col-md-9">
 								<label for="CallNumber">					
@@ -162,15 +159,15 @@
 							</div>-->
 							
 							<div class="form-group col-md-9">
+								<span class="field">
 								<label for="Notes">
-									<span class="field">
-										<span class="<#ERROR name='ERRORNotes'>">  
-											Notes   
-										</span><br>
-										<span class="small-notes">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+									<span class="<#ERROR name='ERRORNotes'>">  
+										Notes   
 									</span>
 								</label>
-								<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea><br>
+									<span class="small-notes" id="Notes-instructions">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+								</span>
+							<textarea id="Notes" name="Notes" aria-describedby="Notes-instructions" rows="2" cols="40" class="form-control"><#PARAM name='Notes'></textarea><br>
 							</div>
 							
 						</section>
