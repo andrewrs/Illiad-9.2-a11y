@@ -165,8 +165,8 @@
 									<span class="req">(required)</span>
 								</span>
 							</label>
-							<input type="text" class="form-control" name="Username" id="Username" value="<#PARAM name='NewUsername'>" autocomplete="off" required>
-							<div class="small-notes">This will also be used as your logon username.</div>
+							<input type="text" class="form-control" aria-describedby="Username-instructions" name="Username" id="Username" value="<#PARAM name='NewUsername'>" autocomplete="off" required>
+							<div class="small-notes" id="Username-instructions">This will also be used as your logon username.</div>
 						</div>
 
 						<div class="form-group col-md-4">
@@ -176,8 +176,8 @@
 									<span class="req">(required)</span>
 								</span>
 							</label>
-							<input type="password" class="form-control" name="Password1" id="Password1" autocomplete="off" required>
-							<div class="small-notes">
+							<input type="password" class="form-control" aria-describedby="Password1-instructions" name="Password1" id="Password1" autocomplete="off" required>
+							<div class="small-notes" id="Password1-instructions">
 								Passwords must be at least eight characters long and contain a lowercase letter, an uppercase letter, and a number.
 							</div>
 						</div>
